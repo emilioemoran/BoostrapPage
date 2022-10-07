@@ -1,0 +1,216 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <style>
+        :root {
+             --javascript: rgb(255, 191, 7);
+             --startup: rgb(221, 55, 69);
+             --react: rgb(23, 162, 185);
+             --negocios: rgb(108, 117, 126);
+        }
+        .javascript{
+          background-color: var(--javascript);
+        }
+        .startup{
+          background-color: var(--startup);
+        }
+        .react{
+          background-color: var(--react);
+        }
+        .negocios{
+          background-color: var(--negocios);
+        }
+        body{
+          display: flex;
+          flex-direction: column;
+          height: 100%
+        }
+        .navbar-brand > img{
+          width: 30%;
+          height: 20%;
+        }
+        .nav-link.active{
+          color: green !important;
+        }
+        .nav-link.active:hover{
+          color: rgb(128, 0, 0) !important;
+        }
+        .header{
+          display: flex;
+          height: 400px;
+          flex-direction: column;
+          background-image: linear-gradient(rgba(5, 5, 5, 0.5), rgba(8, 8, 8, 0.5)),url("ba1.jpg") ;
+          background-size:cover;
+          align-items: flex-end;
+          padding: 10px;
+          background-size: 100% 100%;
+          background-attachment: fixed;
+        }
+        .body-container{
+          height:100%;
+        }
+        .body-container > div{
+          flex: 1;
+        }
+        .header>section{
+            width: 50%;
+            color: azure;
+            font-size: small;
+        }
+        .oradores{
+          justify-content: center;
+        }
+        .skill{
+          border-radius: 5px;
+        }
+        .card{
+          margin: 10px;
+          font-size: small;
+        }
+        footer{
+          background: linear-gradient(90deg, rgba(28,54,67,1) 0%, rgb(29, 67, 88) 35%, rgba(30,77,103,1) 100%);
+        }
+        .btnenviar{
+          background-color: rgb(150, 201, 62);
+        }
+        .pcolor{
+          background-color: rgb(53, 58, 64);
+        }
+
+
+        @media (max-width: 768px){
+          .header>section{
+            width: 30%;
+          }
+        };
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand ">
+                <img src="codoacodo.png" alt="" >
+                <span>Conf Bs As</span>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#">La conferencia</a>
+              <a class="nav-link" href="#">Los oradores</a>
+              <a class="nav-link" href="#">Lugar y fecha</a>
+              <a class="nav-link" href="#">Conviertete en orador</a>
+              <a class="nav-link active" aria-current="page" href="#">Comprar ticket</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="body-container">
+      <div class="header">
+        <section class="text-end me-5 mt-5">
+          <p><strong class="fs-2">Conf BS As</strong><br>Bs As llega por primera vez a la Argentina. Un evento para compartir
+          con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando 
+          el futuro de internte. Ven a conocer a miembros del evento, otro estudiante de Codo a Codo y oradores primer nivel que
+          tenemos para ti. Te esperamos!</p>
+          <div>
+            <button class="btn btn-outline-light">Quiero ser orador</button>
+            <button class="btn btn-success">Comprar Ticket</button>
+          </div>
+        </section>
+      </div>
+      <div class="container-md">
+        <div class="row pt-3 d-flex align-self-center text-center">
+          <p class="fs-9">CONOCE A LOS</p>
+          <h3 class="fw-bold">ORADORES</h3>
+        </div>
+        <div class="oradores container-md row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="steve.jpg" class="card-img-top" alt="...">
+              <div class="d-flex flex-row">
+              </div>
+              <div class="card-body">
+                <a class="skill javascript text-center pe-2 ps-2 text-dark fw-bold text-decoration-none">Javascript</a>
+                <a class="skill react text-center pe-2 ps-2 text-light fw-bold text-decoration-none">React</a>
+                <h5 class="card-title">Steve Jobs</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facere distinctio, voluptate, omnis veritatis labore temporibus fuga minima voluptatum dolorem eveniet, quae repellat quo aliquam. Iure iste quibusdam ab voluptate.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="bill.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a class="skill javascript text-center pe-2 ps-2 text-dark fw-bold text-decoration-none">Javascript</a>
+                <a class="skill react text-center pe-2 ps-2 text-light fw-bold text-decoration-none">React</a>
+                <h5 class="card-title">Bill Gates</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam expedita, nam dolores fugiat nobis, totam nisi quam aperiam ipsum sunt soluta deleniti non a ipsam accusantium reiciendis cumque ab esse.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="ada.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a class="skill negocios text-center pe-2 ps-2 text-light fw-bold text-decoration-none">Negocios</a>
+                <a class="skill startup text-center pe-2 ps-2 text-light fw-bold text-decoration-none">Startups</a>
+                <h5 class="card-title">Ada Lovelace</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam expedita, nam dolores fugiat nobis, totam nisi quam aperiam ipsum sunt soluta deleniti non a ipsam accusantium reiciendis cumque ab esse.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="w-50">
+          <img src="honolulu.jpg" alt="" class="container-fluid">
+        </div>
+        <div class="pcolor text-light w-50">
+          <h3 class="p-2">Bs As - Octubre</h3>
+          <p class="p-2">Buenos Aires es la provincia y localidad mas grande del estado de Argentina, en los Estados Unidos. Honolulu es 
+            la mas sureña de entre las principales ciudades estadounidenses. Anque el nombre de Honolulu se refiere al area urbanaen la costa suroeste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado
+            consolidada que cubre toda la ciudad (aproximadamente 600Km2 de superficie).
+          </p>
+          <button class="btn btn-outline-secondary text-light ms-2 ">Conoce mas</button>
+        </div>
+      </div>
+      <div class="mt-3 d-flex flex-column justify-content-center">
+        <div class="row pt-3 d-flex w-50 align-self-center text-center">
+          <p class="fs-9">CONVIERTETE EN UN</p>
+          <h3 class="fw-bold">ORADOR</h3>
+          <p class="fs-9">Anotate como orador para dar una charla ignite. Cuentanos de que quieres hablar!</p>
+        </div>
+        <div class="row g-3 align-self-center w-50">
+          <div class="col p-0 me-1">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+          </div>
+          <div class="col p-0">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+          </div>
+        </div>
+        <div class="row pt-3 d-flex w-50 align-self-center">
+          <textarea class="form-control" placeholder="Sobre que quieres hablar?" id="floatingTextarea"></textarea>
+          <label class="fs-9 text-secondary" for="floatingTextarea">recuerda incluir un titulo sobre tu charla</label>
+        </div>
+        <button class="btn btnenviar text-light row pt-3 mt-3 w-50 align-self-center text-center">Enviar</button>
+      </div>
+      <div class="container-fluid p-0">
+        <footer class="pt-2 mt-2">
+          <ul class="nav justify-content-center d-flex align-items-center">
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Preguntas<br> frecuentes</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Contactanos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Prensa</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Conferencia</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Terminos y<br> condiciones</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Privacidad</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Estudiantes</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+</body>
