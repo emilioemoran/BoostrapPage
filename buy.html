@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+      <style>
+          :root {
+               --javascript: rgb(255, 191, 7);
+               --startup: rgb(221, 55, 69);
+               --react: rgb(23, 162, 185);
+               --negocios: rgb(108, 117, 126);
+          }
+          .javascript{
+            background-color: var(--javascript);
+          }
+          .startup{
+            background-color: var(--startup);
+          }
+          .react{
+            background-color: var(--react);
+          }
+          .negocios{
+            background-color: var(--negocios);
+          }
+          body{
+            display: flex;
+            flex-direction: column;
+            height: 100%
+          }
+          .navbar-brand > img{
+            width: 30%;
+            height: 20%;
+          }
+          .nav-link.active{
+            color: green !important;
+          }
+          .nav-link.active:hover{
+            color: rgb(128, 0, 0) !important;
+          }
+          .header{
+            display: flex;
+            height: 400px;
+            flex-direction: column;
+            background-image: linear-gradient(rgba(5, 5, 5, 0.5), rgba(8, 8, 8, 0.5)),url("ba1.jpg") ;
+            background-size:cover;
+            align-items: flex-end;
+            padding: 10px;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+          }
+          .body-container{
+            height:100%;
+          }
+          .body-container > div{
+            flex: 1;
+          }
+          .header>section{
+              width: 50%;
+              color: azure;
+              font-size: small;
+          }
+          .oradores{
+            justify-content: center;
+          }
+          .skill{
+            border-radius: 5px;
+          }
+          .card{
+            margin: 10px;
+            font-size: small;
+          }
+          footer{
+            background: linear-gradient(90deg, rgba(28,54,67,1) 0%, rgb(29, 67, 88) 35%, rgba(30,77,103,1) 100%);
+          }
+          .btnenviar{
+            background-color: rgb(150, 201, 62);
+          }
+          .totalcolor{
+            background-color: rgb(152, 189, 246);
+            border: 1px solid rgb(41, 109, 236) !important
+          }
+  
+  
+          @media (max-width: 768px){
+            .header>section{
+              width: 30%;
+            }
+          };
+          
+      </style>
+      
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+              <a class="navbar-brand ">
+                  <img src="codoacodo.png" alt="" >
+                  <span>Conf Bs As</span>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#">La conferencia</a>
+                <a class="nav-link" href="#">Los oradores</a>
+                <a class="nav-link" href="#">Lugar y fecha</a>
+                <a class="nav-link" href="#">Conviertete en orador</a>
+                <a class="nav-link active" aria-current="page" href="#">Comprar ticket</a>
+              </div>
+            </div>
+          </div>
+      </nav>
+      <div class="body-container">
+        <div class="container-fluid d-flex justify-content-center mt-3">
+            <div class=" border border-primary p-4 ms-3 ">
+                <h2 class="text-center">Estudiante</h2>
+                <p class="text-center">Tiene un descuento</p>
+                <h3 class="text-center">80%</h3>
+                <p class="text-secondary text-center">*Debe presentar dni</p>
+            </div>
+            <div class=" border border-success p-4 ms-3 ">
+                <h2 class="text-center">Trainee</h2>
+                <p class="text-center">Tiene un descuento</p>
+                <h3 class="text-center">50%</h3>
+                <p class="text-secondary text-center">*Debe presentar dni</p>
+            </div>
+            <div class=" border border-warning p-4 ms-3 ">
+                <h2 class="text-center">Junior</h2>
+                <p class="text-center">Tiene un descuento</p>
+                <h3 class="text-center">15%</h3>
+                <p class="text-secondary text-center">*Debe presentar dni</p>
+            </div>
+        </div>
+        <div class="mt-1 d-flex flex-column justify-content-center">
+            <div class="row pt-1 d-flex w-50 align-self-center text-center">
+              <p class="fs-9">VENTA</p>
+              <h3 class="fw-bold">VALOR DE TICKET $200</h3>
+            </div>
+            <div class="row g-3 align-self-center w-50">
+              <div class="col p-0 me-1">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+              </div>
+              <div class="col p-0">
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+              </div>
+            </div>
+            <div class="row pt-3 d-flex w-50 align-self-center">
+                <input type="text" class="form-control" placeholder="Correo" aria-label="e-mail">
+            </div>
+            <div class="row pt-3 g-3 align-self-center w-50">
+                <div class="col p-0 me-1">
+                    <p>Cantidad</p>
+                  <input type="text" id="quantity" class="form-control" placeholder="Cantidad" aria-label="quantity">
+                </div>
+                <div class="col p-0">
+                    <p>Categoria</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected value="Estudiante">Estudiante</option>
+                        <option value="Trainee">Trainee</option>
+                        <option value="Junior">Junior</option>
+                      </select>
+                </div>
+            </div>
+            <div class="row pt-3 g-3 align-self-center w-50">
+                <span class="border rounded p-3 align-middle totalcolor ">Total a pagar: $  <p class="d-inline" id="total">0</p></span>
+            </div>
+            <div class="row pt-3 g-3 align-self-center w-50">
+                <button id="borrar" class="btn btnenviar text-light col  mt-3 w-50 align-self-center text-center">Borrar</button>
+                <button id="resumen" class="btn btnenviar text-light col ms-2  mt-3 w-50 align-self-center text-center">Resumen</button>
+            </div>
+          </div>
+        
+          <footer class="pt-2 mt-2">
+            <ul class="nav justify-content-center d-flex align-items-center">
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Preguntas<br> frecuentes</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Contactanos</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Prensa</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Conferencia</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Terminos y<br> condiciones</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Privacidad</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-4 text-light">Estudiantes</a></li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <script>
+        const btn = document.querySelector("#resumen")
+        const btnB = document.querySelector("#borrar")
+
+        btn.onclick = function (){
+            let total = document.getElementById("total")
+            let disc = document.querySelector(".form-select").value
+            let quantity = document.querySelector("#quantity").value
+
+            if(disc == "Estudiante"){
+                total.innerHTML = 200*quantity*0.2
+            }
+            else if(disc == "Trainee"){
+                total.innerHTML = 200*quantity*0.5
+            }
+            else{
+                total.innerHTML = 200*quantity*0.85
+            }
+        }
+        
+        btnB.onclick = function(){
+            total.innerHTML = 0
+            quantity.value = ""
+        }
+       
+      </script>
+  </body>
+  </html>
